@@ -81,7 +81,7 @@ public class WeChatUtil {
             inputStreamReader.close();
             // 释放资源
             inputStream.close();
-            inputStream = null;
+//            inputStream = null;
             httpUrlConn.disconnect();
             jsonObject = JSONObject.fromObject(buffer.toString());
         } catch (ConnectException ce) {
@@ -100,7 +100,7 @@ public class WeChatUtil {
      *            凭证
      * @param appsecret
      *            密钥
-     * @return
+     * @return AccessToken
      */
     public static AccessToken getAccessToken(String appid, String appsecret) {
         AccessToken accessToken = null;

@@ -18,9 +18,9 @@ public interface WeChatService {
      * @param content 消息内容
      *  0.公共方法：发送消息
      */
-    public  boolean sendMessage(String uid, String content);
+      boolean sendMessage(String uid, String content);
 
-    public String getString(String uid, String content);
+     String getString(String uid, String content);
 
 
 

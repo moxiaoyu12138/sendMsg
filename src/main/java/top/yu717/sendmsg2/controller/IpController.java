@@ -3,9 +3,6 @@ package top.yu717.sendmsg2.controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.net.Inet6Address;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -15,7 +12,7 @@ public class IpController {
     private final Map<String ,String> ipMap = new java.util.HashMap<>();
 
     @GetMapping("/cheng_ip")
-    public String getClientIpAddress(HttpServletRequest request,@RequestParam String msg) throws UnknownHostException {
+    public String getClientIpAddress(HttpServletRequest request,@RequestParam String msg)  {
         String ipAddress = request.getHeader("X-Forwarded-For");
         if (ipAddress == null || ipAddress.isEmpty() || "unknown".equalsIgnoreCase(ipAddress)) {
             ipAddress = request.getHeader("Proxy-Client-IP");
@@ -103,17 +100,5 @@ public class IpController {
 
 
 
-    public static String getIPv6Address(HttpServletRequest servletRequest) throws UnknownHostException {
-        HttpServletRequest request = (HttpServletRequest) servletRequest;
-        String ipAddress = request.getHeader("X-FORWARDED-FOR");
-        if (ipAddress == null) {
-            ipAddress = request.getRemoteAddr();
-        }
-        boolean isIPv6 = InetAddress.getByName(ipAddress) instanceof Inet6Address;
-        String ipv6Address = "";
-        if (isIPv6) {
-            ipv6Address = ipAddress;
-        }
-        return ipv6Address;
-    }
+
 }
