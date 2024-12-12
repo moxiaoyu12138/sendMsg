@@ -112,7 +112,8 @@ GET /ip/{msg}
 
 这里的username 和webhook里的对应
 
-![image-20241212115027777](HELP.assets/image-20241212115027777.png)
+![image](https://github.com/user-attachments/assets/391868ec-8cce-467d-9c95-5b7ade07ee4b)
+
 
 > 返回示例
 
