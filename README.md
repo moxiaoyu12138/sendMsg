@@ -8,7 +8,8 @@
 
 调用企业微信发送消息时需要自建.env文件  
 
-![image-20241212115339527](HELP.assets/image-20241212115339527.png)
+![image](https://github.com/user-attachments/assets/f1cf7a02-cf09-4387-9a56-ae1c7c297758)
+
 
 
 
